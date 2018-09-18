@@ -1,0 +1,126 @@
+<div class="layui-tab layui-tab-card">
+    <ul class="layui-tab-title">
+        <li class="layui-this">报名参赛</li>
+        <li>选手登录</li>
+        <li>管理员</li>
+    </ul>
+    <div class="layui-tab-content">
+        <!--报名参赛-->
+        <div class="layui-tab-item layui-show">
+            <form class="layui-form" method="post" action="{:url('Apply/signup')}">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="userpwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="reuserpwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">姓名</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="name" required  lay-verify="required" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">学号</label>
+                    <div class="layui-input-inline">
+                        <input type="number" name="number" required  lay-verify="required" placeholder="请输入学号" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">年级</label>
+                    <div class="layui-input-inline">
+                        <select name="class" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">17级</option>
+                            <option value="1">18级</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">专业</label>
+                    <div class="layui-input-inline">
+                        <select name="professional" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">数控技术</option>
+                            <option value="1">机械设计与自动化</option>
+                            <option value="2">工业机器人</option>
+                            <option value="3">工业自动化</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">班级</label>
+                    <div class="layui-input-inline">
+                        <select name="grade" lay-verify="required">
+                            <option value=""></option>
+                            <option value="1">1班</option>
+                            <option value="2">2班</option>
+                            <option value="3">3班</option>
+                            <option value="4">4班</option>
+                            <option value="5">5班</option>
+                            <option value="6">6班</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">比赛项目</label>
+                    <div class="layui-input-inline">
+                        <select name="project" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0">逆向工程</option>
+                            <option value="1">快速成型</option>
+                            <option value="2">工业机器人</option>
+                            <option value="3">自动化设计</option>
+                            <option value="4">工业设计</option>
+                        </select>
+                    </div>
+                </div><div class="layui-form-item">
+                <label class="layui-form-label">联系电话</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="tel" required  lay-verify="required" placeholder="请输入联系电话" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">报名注册</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!--选手登录-->
+        <div class="layui-tab-item">
+            <form class="layui-form" method="post" action="UserLogin/login">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">用户名:</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">密码</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="userpwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="layui-tab-item">内容3</div>
+    </div>
+</div>
