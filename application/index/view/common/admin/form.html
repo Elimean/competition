@@ -1,0 +1,21 @@
+<div class="layui-show layui-tab-item">
+    <form class="layui-form" method="post" action="{:url('Admin/login')}">
+        <div class="layui-form-item">
+            <label class="layui-form-label">管理员</label>
+            <div class="layui-input-inline">
+                <input type="text" name="adminname" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-inline">
+                <input type="password" name="adminpwd" required  lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">教师管理</li>
+        <li>教师添加</li>
+    </ul>
+    <div class="layui-tab-content">
+        <!--教师管理-->
+        <div class="layui-tab-item layui-show"></div>
+        <!--教师添加-->
+        <div class="layui-tab-item">
+            <form class="layui-form" action="{:url('Teacher/add')}">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">教师姓名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="teacher_name" required  lay-verify="required" placeholder="请输入教师姓名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

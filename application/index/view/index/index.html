@@ -6,11 +6,42 @@
 <body>
 <div class="layui-container">
     <div class="layui-row">
-        <div class="layui-col-md12">
+        <div class="layui-col-xs12">
             {include file="common/nav"}
+        </div>
+    </div>
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-xs12">
+            {include file="common/index_carousel";}
+        </div>
+    </div>
+    <div class="layui-row" style="padding: 20px;background-color:#f2f2f2">
+        <div class="layui-col-xs6">
+            {include file="common/index_card_left";}
+        </div>
+        <div class="layui-col-xs6">
+            {include file="common/index_card_right";}
+        </div>
+    </div>
+    <div class="layui-row layui-bg-cyan">
+        <div class="layui-col-xs12">
+            <h2>大赛指导教师</h2>
+        </div>
+    </div>
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-xs1"></div>
+        <div class="layui-col-xs10">
+            {include file="common/index_personal";}
+        </div>
+    </div>
+    <div class="layui-row layui-bg-cyan" style="padding: 20px">
+        <div class="layui-col-xs4"><i class="fa fa-feed"></i></div>
+        <div class="layui-col-xs8">
+            <h4>版权©2018 四川现代职业学院制造技术系私地创造空间版权所有</h4>
         </div>
     </div>
 </div>
 {include file="common/js";}
+{include file="common/index_js";}
 </body>
 </html>

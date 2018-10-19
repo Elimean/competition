@@ -1,0 +1,22 @@
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">年级管理</li>
+        <li>专业管理</li>
+        <li>班级管理</li>
+        <li>赛项管理</li>
+    </ul>
+    <div class="layui-tab-content">
+        <!--年级管理-->
+        <div class="layui-tab-item layui-show">
+            <volist name="class_list" id="vo">
+                {vo.values}
+            </volist>
+        </div>
+        <!--专业管理-->
+        <div class="layui-tab-item">内容2</div>
+        <!--班级管理-->
+        <div class="layui-tab-item">内容3</div>
+        <!--赛项管理-->
+        <div class="layui-tab-item">内容4</div>
+    </div>
+</div>

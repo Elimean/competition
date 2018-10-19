@@ -23,13 +23,29 @@ class Index extends Controller
         return view('index/apply');
     }
 
-    public function list()
-    {
-        return view('index/list');
-    }
-
     public function about()
     {
         return view('index/about');
+    }
+
+
+    public function adminindex()
+    {
+        return view('admin/index');
+    }
+
+    public function ad()
+    {
+        return view('admin/ad');
+    }
+
+    public function usermanager()
+    {
+        return view('admin/usermanager');
+    }
+
+    public function contestantslist()
+    {
+        return view('admin/contestantslist');
     }
 }

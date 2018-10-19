@@ -2,7 +2,7 @@
     <ul class="layui-tab-title">
         <li class="layui-this">报名参赛</li>
         <li>选手登录</li>
-        <li>管理员</li>
+        <li>教师登录</li>
     </ul>
     <div class="layui-tab-content">
         <!--报名参赛-->
@@ -43,8 +43,8 @@
                     <div class="layui-input-inline">
                         <select name="class" lay-verify="required">
                             <option value=""></option>
-                            <option value="0">17级</option>
-                            <option value="1">18级</option>
+                            <option value="1">17级</option>
+                            <option value="2">18级</option>
                         </select>
                     </div>
                 </div>
@@ -53,10 +53,11 @@
                     <div class="layui-input-inline">
                         <select name="professional" lay-verify="required">
                             <option value=""></option>
-                            <option value="0">数控技术</option>
-                            <option value="1">机械设计与自动化</option>
-                            <option value="2">工业机器人</option>
-                            <option value="3">工业自动化</option>
+                            <option value="1">数控技术</option>
+                            <option value="2">机械设计与制造</option>
+                            <option value="3">工业机器人</option>
+                            <option value="4">工业自动化</option>
+                            <option value="5">工业设计</option>
                         </select>
                     </div>
                 </div>
@@ -79,11 +80,11 @@
                     <div class="layui-input-inline">
                         <select name="project" lay-verify="required">
                             <option value=""></option>
-                            <option value="0">逆向工程</option>
-                            <option value="1">快速成型</option>
-                            <option value="2">工业机器人</option>
-                            <option value="3">自动化设计</option>
-                            <option value="4">工业设计</option>
+                            <option value="1">工业产品数字化设计与制造</option>
+                            <option value="2">广告设计</option>
+                            <option value="3">工业机器人</option>
+                            <option value="4">自动化设计</option>
+                            <option value="5">工业设计</option>
                         </select>
                     </div>
                 </div><div class="layui-form-item">
@@ -101,15 +102,15 @@
         </div>
         <!--选手登录-->
         <div class="layui-tab-item">
-            <form class="layui-form" method="post" action="UserLogin/login">
+            <form class="layui-form" method="post" action="{:url('Userlogin/login')}">
                 <div class="layui-form-item">
-                    <label class="layui-form-label">用户名:</label>
+                    <label class="layui-form-label"><i class="fa fa-user-circle fa-2x"></i></label>
                     <div class="layui-input-inline">
                         <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
                     </div>
                 </div>
                 <div class="layui-form-item">
-                    <label class="layui-form-label">密码</label>
+                    <label class="layui-form-label"><i class="fa fa-keyboard-o fa-2x"></i></label>
                     <div class="layui-input-inline">
                         <input type="password" name="userpwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
                     </div>
@@ -121,6 +122,27 @@
                 </div>
             </form>
         </div>
-        <div class="layui-tab-item">内容3</div>
+        <!--教师登录-->
+        <div class="layui-tab-item">
+            <form class="layui-form" method="post" action="{:url('Teacher/login')}">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="fa fa-user-o fa-2x"></i></label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="username" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><i class="fa fa-keyboard-o fa-2x"></i></label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="userpwd" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">登录</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

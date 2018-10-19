@@ -1,0 +1,83 @@
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">未通过</li>
+        <li>已通过</li>
+    </ul>
+    <div class="layui-tab-content">
+        <!--未通过-->
+        <div class="layui-tab-item layui-show">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="80">
+                    <col width="80">
+                    <col width="200">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>专业</th>
+                    <th>年级</th>
+                    <th>班级</th>
+                    <th>比赛名称</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                    {volist name="user_unappoved" id="vo"}
+                        <tr>
+                            <td>{$vo.name}</td>
+                            <td>{$vo.number}</td>
+                            <td>{$vo.professional_values}</td>
+                            <td>{$vo.class_values}</td>
+                            <td>{$vo.grade_values}</td>
+                            <td>{$vo.project_values}</td>
+                            <td><a class="layui-btn layui-btn-normal" href="{:url('Teacher/appoved')}/id/{$vo.number}">审核通过</a><a class="layui-btn layui-btn-danger">删除用户</a></td>
+                        </tr>
+                    {/volist}
+                </tbody>
+            </table>
+        </div>
+            {$page_unappoved}
+        <!--已通过-->
+        <div class="layui-tab-item">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="100">
+                    <col width="100">
+                    <col width="100">
+                    <col width="80">
+                    <col width="80">
+                    <col width="200">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>学号</th>
+                    <th>专业</th>
+                    <th>年级</th>
+                    <th>班级</th>
+                    <th>比赛名称</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {volist name="user_appoved" id="vo"}
+                <tr>
+                    <td>{$vo.name}</td>
+                    <td>{$vo.number}</td>
+                    <td>{$vo.professional_values}</td>
+                    <td>{$vo.class_values}</td>
+                    <td>{$vo.grade_values}</td>
+                    <td>{$vo.project_values}</td>
+                    <td><a class="layui-btn layui-btn-normal" href="{:url('Teacher/unappoved')}/id/{$vo.number}">未通过</a><a class="layui-btn layui-btn-danger">删除用户</a></td>
+                </tr>
+                {/volist}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
